@@ -2,6 +2,10 @@
 
 <h2>Мои проекты</h2>
 
+<div class="row justify-content-end">
+    <a class="btn btn-primary" asp-controller="Project" asp-action="Add" role="button">Добавить проект</a>
+</div>
+<br/>
 <div class="row">
     @foreach(var project in Model)
             {
