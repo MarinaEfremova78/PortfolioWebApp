@@ -13,5 +13,16 @@ namespace PortfolioWebApp.Controllers
             var projects = ProjectStorage.Projects;
             return View(projects);
         }
+
+        public IActionResult Add()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Add(Project project)
+        {
+            return View();
+        }
     }
 }

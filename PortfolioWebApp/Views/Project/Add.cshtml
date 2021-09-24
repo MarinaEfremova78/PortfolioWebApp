@@ -1,0 +1,31 @@
+﻿@model PortfolioWebApp.Project
+
+<div class="row justify-content-lg-center">
+    <h1>Добавление нового проекта</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Add">
+            <div class="form-group">
+                <label asp-for="Name" class="custom-control-label">Название</label>
+                <input asp-for="Name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Link" class="custom-control-label">Ссылка</label>
+                <input asp-for="Link" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="custom-control-label">Описание</label>
+                <input asp-for="Description" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Добавить" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Назад к списку проектов</a>
+</div>
