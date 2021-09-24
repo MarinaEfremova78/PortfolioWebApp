@@ -1,0 +1,28 @@
+﻿@model List<Project>
+
+<h2>Мои проекты</h2>
+
+<div class="row">
+    @foreach(var project in Model)
+            {
+                <div class="col-md-4 mb-5">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div>
+                                <img class ="card-img-top" src="~/img/icons82.png" alt="@project.Name"/>
+                            </div>
+                            <h2 class="card-title text-center">
+                                <a href="@project.Link" target="_blank">@project.Name</a>
+                            </h2>
+                            <div>
+                                <p class="font-weight-normal">@project.Description</p>
+                            </div>
+                            <div class="text-center">
+                                <a class="btn btn-danger" asp-controller="Project" asp-action="Remove" asp-route-name="@project.Name" role="button">Удалить</a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+</div>
