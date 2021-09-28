@@ -22,5 +22,15 @@ namespace PortfolioWebApp
                 Description = "Игры с шариками"
             }
         };
+
+        public static void RemoveByName(string name)
+        {
+            Projects.RemoveAll(x => x.Name == name);
+        }
+
+        public static void Add(Project project)
+        {
+            Projects.Add(project);
+        }
     }
 }

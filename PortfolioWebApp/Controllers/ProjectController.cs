@@ -23,7 +23,15 @@ namespace PortfolioWebApp.Controllers
         public IActionResult Add(Project project)
         {
             ProjectStorage.Add(project);
-            return View();
+
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Remove(string name)
+        {
+            ProjectStorage.RemoveByName(name);
+
+            return RedirectToAction("Index");
         }
     }
 }
