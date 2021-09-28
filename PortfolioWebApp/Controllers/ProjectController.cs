@@ -22,6 +22,7 @@ namespace PortfolioWebApp.Controllers
         [HttpPost]
         public IActionResult Add(Project project)
         {
+            ProjectStorage.Add(project);
             return View();
         }
     }
